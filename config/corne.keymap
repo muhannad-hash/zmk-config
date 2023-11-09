@@ -13,7 +13,7 @@
     time-to-max-speed-ms = <500>;
 };
 &mwh {
-    acceleration-exponent=<1>;
+    acceleration-exponent=<2>;
 };
  
 / {
@@ -68,7 +68,7 @@
 // | SHFT |     |     |     |     |     |   |  -  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &none  &none &none &mmv MOVE_UP &none &none    &none &none  &mwh SCROLL_UP &kp RPAR &kp ASTERISK &kp BSPC
+   &none  &none &none &mmv MOVE_UP &none &none    &none &mwh SCROLL_UP &none &kp RPAR &kp ASTERISK &kp BSPC
    &none &none &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT   &trans      &kp UNDER &mkp LCLK &mkp RCLK        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans    &trans   &trans   &trans      &kp MINUS &mwh SCROLL_DOWN  &kp LBRC        &kp RBRC &kp PIPE &trans 
                              &kp LGUI &trans   &trans   &trans   &trans    &kp RALT
