@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: krikun98
-      url-base: https://github.com/krikun98
+    - name: stmotorspark
+      url-base: https://github.com/StMotorSpark
   projects:
     - name: zmk
-      remote: krikun98
-      revision: mouse-pr 
+      remote: stmotorspark
+      revision: mouse-niceview-stms 
       import: app/west.yml
   self:
     path: config
