@@ -17,6 +17,15 @@
 };
  
 / {
+        combos {
+        compatible = "zmk,combos";
+        combo_bt_clr {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&bt BT_CLR>;
+            layers = <1>;
+        };
+    };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -29,8 +38,8 @@
                         bindings = <
    &kp TAB   &lt 3 Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &kp BSPC
    &kp LCTRL &lt 1 A &kp S &kp D &kp F &lt 2 G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp RET   &kp SPACE &mo 2 &kp RALT
+   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &to 1 &kp RET   &kp SPACE &to 2 &kp RALT
                         >;
                 };
                 lower_layer {
@@ -41,9 +50,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N0   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &kp N1   &kp N2 &kp N3    &trans &trans
-                                    &kp LGUI     &trans       &trans      &trans  &trans   &kp RALT
+                                    &kp LGUI     &to 0       &trans      &trans  &to 0   &kp RALT
                         >;
                 };
 
@@ -57,7 +66,7 @@
    &kp  TAB  &kp EXCL &kp AT &kp UP_ARROW &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR &kp RPAR &kp ASTERISK &kp BSPC
    &kp LCTRL &kp TILDE &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW   &trans      &kp UNDER &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans    &trans   &trans   &trans      &kp MINUS &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans 
-                             &kp LGUI &trans   &trans   &trans   &trans    &kp RALT
+                             &kp LGUI &to 0   &trans   &trans   &to 0    &kp RALT
                         >;
                 };
 
@@ -76,3 +85,9 @@
                 };
         };
 };
+// TODO:
+// 1. combo for the blt-clear key to prevent from wrong press.      @ done
+// 2. find a place for page up,down, end, home. maybe one more layer.
+// 3. find a place for del, and better symbols location.(maybe)
+// 4. coming soon, crete a layer of macros for the markdown language, maybe one for python.(def, class, return...)
+// 5. shift to the mouse layer instead of momentary as it's hard to keep it pressed.
