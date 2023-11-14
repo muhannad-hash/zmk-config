@@ -21,10 +21,22 @@
         compatible = "zmk,combos";
         combo_bt_clr {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             bindings = <&bt BT_CLR>;
             layers = <1>;
         };
+           combo_bt_1 {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&bt BT_SEL 0>;
+            layers = <0>;
+           };     
+            combo_bt_2 {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&bt BT_SEL 0>;
+            layers = <0>;
+           }; 
     };
         keymap {
                 compatible = "zmk,keymap";
