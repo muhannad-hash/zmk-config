@@ -21,27 +21,39 @@
         compatible = "zmk,combos";
         combo_bt_clr {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
             bindings = <&bt BT_CLR>;
             layers = <1>;
         };
            combo_bt_1 {
             timeout-ms = <50>;
-            key-positions = <5 6>;
+            key-positions = <3 4>;
             bindings = <&bt BT_SEL 0>;
-            layers = <0>;
+            layers = <0 1 2>;
            };     
             combo_bt_2 {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&bt BT_SEL 1>;
-            layers = <0>;
+            layers = <0 1 2 >;
            }; 
+            combo_bt_3 {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&bt BT_SEL 2>;
+            layers = <0 1 2 >;
+           };
             combo_to_3 {
             timeout-ms = <50>;
-            key-positions = <38 41>;
+            key-positions = <37 40>;
             bindings = <&to 3>;
-            layers = <0>;
+            layers = <0 1 2>;
+           }; 
+            combo_to_0 {
+            timeout-ms = <25>;
+            key-positions = <38 39>;
+            bindings = <&to 0>;
+            layers = <1 2 3>;
            }; 
            
     };
@@ -71,7 +83,7 @@
     &kp TAB    &kp N1       &kp BSLH    &kp PAGE_DOWN      &kp PAGE_UP       &kp N5         &kp N0   &kp N7   &kp N8 &kp N9    &kp N0 &trans
    &trans &kp ASTERISK &kp AT &kp CARET &kp DOLLAR &kp DOT   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
    &trans  &none       &none       &none       &kp PIPE       &none         &none   &kp N1   &kp N2 &kp N3    &none &trans
-                                    &kp LGUI     &to 0       &trans      &trans  &to 0   &kp RALT
+                                    &kp LGUI     &none      &trans      &trans  &to 0   &kp RALT
                         >;
                 };
 
@@ -85,7 +97,7 @@
    &kp  TAB  &kp EXCL &kp AT &kp UP_ARROW &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR &kp RPAR &kp ASTERISK &kp BSPC
    &kp LCTRL &kp TILDE &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW   &trans      &kp UNDER &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans    &trans   &trans   &trans      &kp MINUS &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans 
-                             &kp LGUI &to 0   &trans   &trans   &to 0    &kp RALT
+                             &kp LGUI &to 0   &trans   &trans   &none   &kp RALT
                         >;
                 };
 
