@@ -34,9 +34,16 @@
             combo_bt_2 {
             timeout-ms = <50>;
             key-positions = <6 7>;
-            bindings = <&bt BT_SEL 0>;
+            bindings = <&bt BT_SEL 1>;
             layers = <0>;
            }; 
+            combo_to_3 {
+            timeout-ms = <50>;
+            key-positions = <38 40>;
+            bindings = <&to 3>;
+            layers = <0>;
+           }; 
+           
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -61,9 +68,9 @@
 // | SHFT |     |     |     |     |     |   |     |@q     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N0   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &kp N1   &kp N2 &kp N3    &trans &trans
+    &kp TAB    &kp N1       &kp BSLH    &kp PAGE_DOWN      &kp PAGE_UP       &kp N5         &kp N0   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &trans &kp ASTERISK &kp AT &kp CARET &kp DOLLAR &kp DOT   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
+   &trans  &none       &none       &none       &kp PIPE       &none         &none   &kp N1   &kp N2 &kp N3    &none &trans
                                     &kp LGUI     &to 0       &trans      &trans  &to 0   &kp RALT
                         >;
                 };
