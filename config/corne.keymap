@@ -18,13 +18,13 @@
  
 / {
     behaviors {
-        laye: lay_lay {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LAY_LAY";
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_LAYERS";
             #binding-cells = <0>;
+            tapping-term-ms = <300>;
             bindings = <&to 1>, <&to 2>;
-            mods = <(MOD_LSFT)>;
-        };
+        };;
     };
         combos {
         compatible = "zmk,combos";
