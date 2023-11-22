@@ -24,7 +24,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&to 1>, <&to 2>;
-        };;
+        };
     };
         combos {
         compatible = "zmk,combos";
