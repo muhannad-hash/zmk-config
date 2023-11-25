@@ -64,7 +64,12 @@
             bindings = <&to 0>;
             layers = <1 2 3>;
            }; 
-           
+            combo_to_4 {
+            timeout-ms = <25>;
+            key-positions = <1 2 3>;
+            bindings = <&to 4>;
+            layers = <0>;
+           }; 
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -122,6 +127,14 @@
    &trans &trans   &trans    &trans   &trans   &trans      &kp MINUS &mwh SCROLL_DOWN  &kp LBRC        &kp RBRC &kp PIPE &trans 
                              &kp LGUI &trans   &trans   &trans   &trans    &kp RALT
                         >;
+                };
+                dota_layer {
+                    bindings = <
+   &none  &none &kp W &kp E &kp R &kp T&none &none   &none &none   &none   &none &none
+   &none &kp A &kp S &kp D &kp F &kp G &none   &none   &none   &none   &none   &none
+   &none &none   &kp X &kp C &kp V &kp B &none   &none   &none   &none   &none  &none
+                             &kp Z   &kp LALT     &kp M &to 0     &none     &none
+                    >;
                 };
         };
 };
