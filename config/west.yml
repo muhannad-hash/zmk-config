@@ -1,13 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: stmotorspark
-      url-base: https://github.com/StMotorSpark
+    - name: muhannad
+      url-base: https://github.com/muhannad-hash
   projects:
     - name: zmk
-      remote: stmotorspark
-      revision: mouse-niceview-stms 
+      remote: muhannad
+      revision: main 
       import: app/west.yml
   self:
     path: config
