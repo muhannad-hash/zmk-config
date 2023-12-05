@@ -25,6 +25,39 @@
             tapping-term-ms = <300>;
             bindings = <&to 1>, <&to 2>;
         };
+        meup: e_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp UP_ARROW>;
+            mods = <(MOD_LGUI)>;
+        };
+        mfrightsc: f_rsc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp RIGHT_ARROW>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+        msleftsc: s_lsc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp LEFT_ARROW>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+        mqquit: q_quit {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp F4>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LALT)>;
+        };
+        mbsdel: backsp_del {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+            mods = <(MOD_LGUI)>;
+        };
     };
         combos {
         compatible = "zmk,combos";
@@ -81,8 +114,8 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &lt 3 Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &kp BSPC
-   &sk LCTRL &lt 1 A &kp S &kp D &kp F &lt 2 G   &lt 2 H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
+   &kp TAB   &mqquit &kp W &meup &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
+   &sk LCTRL &lt 1 A &msleftsc &kp D &mfrightsc &lt 2 G   &lt 2 H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
    &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &to 0 &kp RET   &kp SPACE &td0 &kp RALT
                         >;
@@ -138,9 +171,3 @@
                 };
         };
 };
-// TODO:
-// 1. combo for the blt-clear key to prevent from wrong press.      @ done
-// 2. find a place for page up,down, end, home. maybe one more layer.
-// 3. find a place for del, and better symbols location.(maybe)
-// 4. coming soon, crete a layer of macros for the markdown language, maybe one for python.(def, class, return...)
-// 5. shift to the mouse layer instead of momentary as it's hard to keep it pressed.
