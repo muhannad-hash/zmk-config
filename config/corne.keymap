@@ -36,21 +36,18 @@
             #binding-cells = <0>;
             bindings = <&kp F>, <&kp RIGHT_ARROW>;
             mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         msleftsc: s_lsc {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp LEFT_ARROW>;
             mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LSFT)>;
         };
         mqquit: q_quit {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp F4>;
             mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LALT)>;
         };
         mbsdel: backsp_del {
             compatible = "zmk,behavior-mod-morph";
