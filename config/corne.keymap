@@ -27,33 +27,38 @@
         };
         meup: e_up {
             compatible = "zmk,behavior-mod-morph";
+            label = "e_up";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp UP_ARROW>;
             mods = <(MOD_LGUI)>;
         };
-        mfrightsc: f_rsc {
+        commatwo: comma_2 {
             compatible = "zmk,behavior-mod-morph";
+            label = "comme_2";
             #binding-cells = <0>;
-            bindings = <&kp F>, <&kp RIGHT_ARROW>;
+            bindings = <&kp COMMA>, <&kp 2>;
             mods = <(MOD_LGUI)>;
         };
-        msleftsc: s_lsc {
+        mone: M_1 {
             compatible = "zmk,behavior-mod-morph";
+            label = "M_1";
             #binding-cells = <0>;
-            bindings = <&kp S>, <&kp LEFT_ARROW>;
-            mods = <(MOD_LGUI)>;
-        };
-        mqquit: q_quit {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp F4>;
+            bindings = <&kp M>, <&kp 1>;
             mods = <(MOD_LGUI)>;
         };
         mbsdel: backsp_del {
             compatible = "zmk,behavior-mod-morph";
+            label = "backsp_del";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DEL>;
-            mods = <(MOD_LGUI)>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(LSFT)>;
+        };
+        dotthree: dot_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "dot_3";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp 3>;
+            mods = <(LGUI)>;
         };
     };
         combos {
@@ -111,9 +116,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &mqquit &kp W &meup &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
-   &sk LCTRL &lt 1 A &msleftsc &kp D &mfrightsc &lt 2 G   &lt 2 H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
-   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+   &kp TAB   &kp Q &kp W &meup &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
+   &sk LCTRL &lt 1 A &kp S &kp D &kp F &lt 2 G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
+   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &mone  &commatwo &dotthree &kp FSLH &kp ESC
                   &kp LGUI &to 0 &kp RET   &kp SPACE &td0 &kp RALT
                         >;
                 };
