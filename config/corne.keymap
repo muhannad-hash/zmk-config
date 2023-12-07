@@ -25,40 +25,12 @@
             tapping-term-ms = <300>;
             bindings = <&to 1>, <&to 2>;
         };
-        meup: e_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "e_up";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&kp UP_ARROW>;
-            mods = <(MOD_LGUI)>;
-        };
-        commatwo: comma_2 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "comme_2";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp 2>;
-            mods = <(MOD_LGUI)>;
-        };
-        mone: M_1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_1";
-            #binding-cells = <0>;
-            bindings = <&kp M>, <&kp 1>;
-            mods = <(MOD_LGUI)>;
-        };
         mbsdel: backsp_del {
             compatible = "zmk,behavior-mod-morph";
             label = "backsp_del";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(LSFT)>;
-        };
-        dotthree: dot_3 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "dot_3";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp 3>;
-            mods = <(LGUI)>;
+            mods = <(MOD_RALT)>;
         };
     };
         combos {
@@ -116,9 +88,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &meup &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
    &sk LCTRL &lt 1 A &kp S &kp D &kp F &lt 2 G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
-   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &mone  &commatwo &dotthree &kp FSLH &kp ESC
+   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &to 0 &kp RET   &kp SPACE &td0 &kp RALT
                         >;
                 };
@@ -131,7 +103,7 @@
                         bindings = <
     &kp TAB    &kp PRINTSCREEN       &kp BSLH    &kp PAGE_DOWN      &kp PAGE_UP       &kp DOT         &kp MINUS   &kp N7   &kp N8 &lt 3 N9    &none &trans
    &trans &kp ASTERISK &kp AT &kp CARET &kp DOLLAR &kp HASH   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
-   &trans  &none       &none       &none       &kp PIPE       &none         &kp DOT   &kp N1   &kp N2 &kp N3    &none &trans
+   &trans  &none       &none       &kp TILDE       &kp PIPE       &none         &kp DOT   &kp N1   &kp N2 &kp N3    &none &trans
                                     &kp LGUI     &trans      &trans      &trans  &trans   &kp RALT
                         >;
                 };
