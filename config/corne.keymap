@@ -35,7 +35,7 @@
             #binding-cells = <2>;
             flavor="tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&caps_word>, <&kp>;
+            bindings = <&kp>, <&caps_word>;
         };   
         mbsdel: backsp_del {
             compatible = "zmk,behavior-mod-morph";
@@ -103,7 +103,7 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
    &sk LCTRL &lt 1 A &kp S &kp D &kp F &lt 2 G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
    &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &to 0 &kp RET   &kp SPACE &td0 &kp RALT
+                  &kp LGUI &to 0 &kp RET   &kp SPACE &td0 &ht0 RALT 0
                         >;
                 };
                 lower_layer {
