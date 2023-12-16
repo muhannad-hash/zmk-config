@@ -15,6 +15,10 @@
 &mwh {
     acceleration-exponent=<2>;
 };
+
+&caps_word{
+    continue-list=<UNDERSCORE>;
+};
  
 / {
     behaviors {
@@ -25,12 +29,21 @@
             tapping-term-ms = <300>;
             bindings = <&to 1>, <&to 2>;
         };
+        ht0: caps_word_ralt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "caps_word_ralt";
+            #binding-cells = <2>;
+            flavor="tap-preferred";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&caps_word>, <&kp>;
+        };   
         mbsdel: backsp_del {
             compatible = "zmk,behavior-mod-morph";
             label = "backsp_del";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_RALT)>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
     };
         combos {
@@ -137,7 +150,7 @@
                 };
                 dota_layer {
                     bindings = <
-   &none  &none &kp W &kp E &kp R &kp T&none &none   &none &none   &none   &none &none
+   &none  &none &none &kp W &kp E &kp R &none &none   &none &none   &none   &none
    &none &kp A &kp S &kp D &kp F &kp G &none   &none   &none   &none   &none   &none
    &none &none   &kp X &kp C &kp V &kp B &none   &none   &none   &none   &none  &none
                              &kp Z   &kp LALT     &kp M &to 0     &none     &none
