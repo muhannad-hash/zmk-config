@@ -7,17 +7,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
 
-&mmv {
-    time-to-max-speed-ms = <500>;
-};
-&mwh {
-    acceleration-exponent=<2>;
-};
 
 &caps_word{
-    continue-list=<UNDERSCORE>;
+    continue-list=<UNDERSCORE BACKSPACE>;
 };
  
 / {
@@ -100,10 +93,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
-   &sk LCTRL &lt 1 A &kp S &kp D &kp F &lt 2 G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
-   &sk LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &to 0 &kp RET   &kp SPACE &td0 &ht0 RALT 0
+    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
+    &to 0 &lt 1 A &kp S &kp D &kp F &lt 2 G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
+    &td0 &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &sk LSHFT &kp RET   &kp SPACE &sk LCTRL &ht0 RALT 0
                         >;
                 };
                 lower_layer {
@@ -113,9 +106,9 @@
 // | SHFT |     |     |     |     |     |   |     |@q     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-    &kp TAB    &kp PRINTSCREEN       &kp BSLH    &kp PAGE_DOWN      &kp PAGE_UP       &kp DOT         &kp MINUS   &kp N7   &kp N8 &lt 3 N9    &none &trans
-   &trans &kp ASTERISK &kp AT &kp CARET &kp DOLLAR &kp HASH   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
-   &trans  &none       &none       &kp TILDE       &kp PIPE       &none         &kp DOT   &kp N1   &kp N2 &kp N3    &none &trans
+    &trans    &kp PRINTSCREEN       &kp BSLH    &kp PAGE_DOWN      &kp PAGE_UP       &kp DOT         &kp MINUS   &kp N7   &kp N8 &lt 3 N9    &none &trans
+    &trans &kp ASTERISK &kp AT &kp CARET &kp DOLLAR &kp HASH   &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans
+    &trans  &none       &none       &kp TILDE       &kp PIPE       &none         &kp DOT   &kp N1   &kp N2 &kp N3    &none &trans
                                     &kp LGUI     &trans      &trans      &trans  &trans   &kp RALT
                         >;
                 };
@@ -127,9 +120,9 @@
 // | SHFT |     |     |     |     |     |   |  -  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp F4 &kp AT &kp UP_ARROW &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR &lt 3 RPAR &kp ASTERISK &kp BSPC
-   &trans &kp TILDE &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW   &trans      &kp UNDER &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans &none   &trans    &trans   &trans   &trans      &kp MINUS &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans 
+    &kp  TAB  &kp F4 &kp AT &kp UP_ARROW &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR &lt 3 RPAR &kp ASTERISK &kp BSPC
+    &trans &kp TILDE &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW   &trans      &kp UNDER &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+    &trans &none   &trans    &trans   &trans   &trans      &kp MINUS &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans 
                              &kp LGUI &trans   &trans   &trans   &trans   &kp RALT
                         >;
                 };
@@ -141,10 +134,11 @@
 // | SHFT |     |     |     |     |     |   |  -  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans  &none &none &mmv MOVE_UP &none &none    &none &mwh SCROLL_UP &none &kp RPAR &kp ASTERISK &kp BSPC
-   &trans &none &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT   &trans      &kp UNDER &mkp LCLK &mkp RCLK        &kp RBKT &kp BSLH &kp GRAVE
-   &trans &trans   &trans    &trans   &trans   &trans      &kp MINUS &mwh SCROLL_DOWN  &kp LBRC        &kp RBRC &kp PIPE &trans 
-                             &kp LGUI &trans   &trans   &trans   &trans    &kp RALT
+    &trans  &none &none &none   &none &none    &none &none &none &none  &none  &none 
+    &trans  &none &none &none   &none &none    &none &none &none &none  &none  &none 
+    &trans  &none &none &none   &none &none    &none &none &none &none  &none  &none 
+
+                            &kp LGUI &trans   &trans   &trans   &trans    &kp RALT
                         >;
                 };
                 dota_layer {
