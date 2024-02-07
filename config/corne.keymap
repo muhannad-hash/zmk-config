@@ -35,7 +35,7 @@
             label = "backsp_del";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DEL>;
-            mods = <(MOD_RALT|MOD_LALT)>;
+            mods = <(MOD_LSFT|MOD_LALT)>;
         };
     };
         combos {
@@ -44,23 +44,27 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&bt BT_CLR>;
+            require-prior-idle-ms = <100>;
             layers = <1>;
         };
            combo_bt_1 {
             timeout-ms = <50>;
             key-positions = <3 4>;
             bindings = <&bt BT_SEL 0>;
+            require-prior-idle-ms = <100>;
             layers = <0 1 2>;
            };     
             combo_bt_2 {
             timeout-ms = <50>;
             key-positions = <7 8>;
+            require-prior-idle-ms = <100>;
             bindings = <&bt BT_SEL 1>;
             layers = <0 1 2 >;
            }; 
             combo_bt_3 {
             timeout-ms = <50>;
             key-positions = <5 6>;
+            require-prior-idle-ms = <100>;
             bindings = <&bt BT_SEL 2>;
             layers = <0 1 2 >;
            };
@@ -68,11 +72,13 @@
             timeout-ms = <50>;
             key-positions = <37 40>;
             bindings = <&to 3>;
+            require-prior-idle-ms = <100>;
             layers = <0 1 2>;
            }; 
             combo_to_0 {
             timeout-ms = <25>;
             key-positions = <38 39>;
+            require-prior-idle-ms = <100>;
             bindings = <&to 0>;
             layers = <1 2 3>;
            }; 
@@ -80,6 +86,7 @@
             timeout-ms = <25>;
             key-positions = <1 2 3>;
             bindings = <&to 4>;
+            require-prior-idle-ms = <100>;
             layers = <0>;
            }; 
     };
