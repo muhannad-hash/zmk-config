@@ -100,10 +100,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &lt 3 O   &kp P    &mbsdel
-    &to 0 &lt 1 A &kp S &kp D &kp F &lt 2 G   &kp H &kp J  &kp K     &kp L   &lt 1 SEMI &kp SQT
-    &td0 &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &sk LSHFT &kp RET   &kp SPACE &sk LCTRL &ht0 RALT 0
+    &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I     &lt 3 O   &kp P       &mbsdel
+    &to 0       &lt 1 A     &kp S       &kp D       &kp F       &lt 2 G     &kp H       &kp J       &kp K     &kp L     &lt 1 SEMI  &kp SQT
+    &td0        &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA &kp DOT   &kp FSLH    &kp ESC
+                            &kp LGUI    &sk LSHFT   &kp RET     &kp SPACE   &sk LCTRL   &ht0 RALT 0
                         >;
                 };
                 lower_layer {
@@ -116,7 +116,7 @@
     &trans      &kp PRINTSCREEN     &kp BSLH        &kp ASTERISK      &kp PERCENT       &kp DOT            &kp MINUS   &kp N7   &kp N8 &lt 3 N9    &none &trans
     &trans      &none               &kp AT          &kp CARET         &kp DOLLAR        &kp HASH           &kp N0      &kp N4   &kp N5 &kp N6      &none &none
     &trans      &none               &kp AMPERSAND   &kp TILDE         &kp PIPE          &kp EXCLAMATION    &kp DOT     &kp N1   &kp N2 &kp N3      &none &none
-                                    &trans     &trans      &trans      &trans  &trans   &trans
+                                    &trans          &trans            &trans            &trans             &trans      &trans
                         >;
                 };
 
