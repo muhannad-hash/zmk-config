@@ -103,7 +103,7 @@
     &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I     &lt 3 O   &kp P       &mbsdel
     &to 0       &lt 1 A     &kp S       &kp D       &kp F       &lt 2 G     &kp H       &kp J       &kp K     &kp L     &lt 1 SEMI  &kp SQT
     &td0        &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA &kp DOT   &kp FSLH    &kp ESC
-                            &kp LGUI    &sk LSHFT   &kp RET     &kp SPACE   &sk LCTRL   &ht0 RALT 0
+                            &kp LGUI    &kp LSHFT   &kp RET     &kp SPACE   &kp LCTRL   &ht0 RALT 0
                         >;
                 };
                 lower_layer {
