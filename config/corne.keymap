@@ -100,7 +100,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-    &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I     &lt 3 O   &kp P       &mbsdel
+    &trans     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I     &lt 3 O   &kp P       &mbsdel
     &to 0       &lt 1 A     &kp S       &kp D       &kp F       &lt 2 G     &kp H       &kp J       &kp K     &kp L     &lt 1 SEMI  &kp SQT
     &td0        &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA &kp DOT   &kp FSLH    &kp ESC
                             &kp LGUI    &kp LSHFT   &kp RET     &kp SPACE   &kp LCTRL   &ht0 RALT 0
@@ -127,34 +127,11 @@
 // | SHFT |     |     |     |     |     |   |  -  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-    &kp  TAB  &kp F4 &kp AT &kp UP_ARROW &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR &lt 3 RPAR &kp ASTERISK &trans 
-    &trans &kp TILDE &kp LEFT_ARROW  &kp DOWN_ARROW &kp RIGHT_ARROW   &trans      &kp UNDER &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-    &trans &none   &trans    &trans   &trans   &trans      &kp MINUS &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans 
+    &trans     &kp F4       &kp AT          &kp UP_ARROW    &kp DLLR            &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR        &lt 3 RPAR &kp ASTERISK &trans 
+    &trans     &kp TILDE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &trans      &kp UNDER &kp EQUAL &kp LBKT        &kp RBKT   &kp BSLH     &kp GRAVE
+    &trans     &none        &trans          &trans          &trans              &trans      &kp MINUS &kp PLUS  &kp LBRC        &kp RBRC   &kp PIPE     &trans 
                              &trans &trans   &trans   &trans   &trans   &trans
                         >;
-                };
-
-                more_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  )  |  *  | BKSP |
-// | CTRL |     |     |     |     |     |   |  _  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  -  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-    &trans  &none &none &none   &none &none    &none &none &none &none  &none  &none 
-    &trans  &none &none &none   &none &none    &none &none &none &none  &none  &none 
-    &trans  &none &none &none   &none &none    &none &none &none &none  &none  &none 
-
-                            &trans &trans   &trans   &trans   &trans    &trans
-                        >;
-                };
-                dota_layer {
-                    bindings = <
-   &none  &none &kp W &kp E &kp R &kp T &none &none   &none &none   &none   &none
-   &none &kp A &kp S &kp D &kp F &kp G &none   &none   &none   &none   &none   &none
-   &none &none   &kp X &kp C &kp V &kp B &none   &none   &none   &none   &none  &none
-                             &kp Z   &kp LALT     &kp M &to 0     &none     &none
-                    >;
                 };
         };
 };
