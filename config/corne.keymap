@@ -47,6 +47,13 @@
             require-prior-idle-ms = <100>;
             layers = <1>;
         };
+        combo_dota {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&to 3>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
+        };
            combo_bt_1 {
             timeout-ms = <50>;
             key-positions = <3 4>;
@@ -131,6 +138,20 @@
     &trans     &kp TILDE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &trans      &kp UNDERSCORE  &kp EQUAL &kp LBKT        &kp RBKT   &kp BSLH     &kp GRAVE
     &trans     &none        &trans          &trans          &trans              &trans      &kp MINUS       &kp PLUS  &kp LBRC        &kp RBRC   &kp PIPE     &trans 
                              &trans &trans   &trans   &trans   &trans   &trans
+                        >;
+                };
+
+                dota_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  )  |  *  | BKSP |
+// | CTRL |     |     |     |     |     |   |  _  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  -  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+    &none     &kp Q       &kp W          &kp E    &kp R     &kp T      &kp CARET       &kp AMPS  &kp LPAR        &kp RPAR   &kp ASTERISK &trans 
+    &none     &kp A       &kp S          &kp D    &kp F     &kp G      &kp UNDERSCORE  &kp EQUAL &kp LBKT        &kp RBKT   &kp BSLH     &kp GRAVE
+    &none     &kp Z       &kp X          &kp C    &kp V     &kp B      &kp MINUS       &kp PLUS  &kp LBRC        &kp RBRC   &kp PIPE     &trans 
+                             &kp Y &kp LEFT_ALT   &kp SPACE   &to 0   &trans   &trans
                         >;
                 };
         };
