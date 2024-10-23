@@ -47,6 +47,13 @@
             require-prior-idle-ms = <100>;
             layers = <1>;
         };
+        combo_unlock {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&studio_unlock>;
+            require-prior-idle-ms = <100>;
+            layers = <1>;
+        };
         combo_dota {
             timeout-ms = <50>;
             key-positions = <10 11>;
